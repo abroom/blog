@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/abroom/blog#readme",
   "dependencies": {
-  	"pg": "4.x",
     "ejs": "^2.5.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express-stormpath": "^3.1.5",
+    "pg": "4.x"
   }
 }
