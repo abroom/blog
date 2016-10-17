@@ -25,10 +25,23 @@ app.get('/blog', function (request, response) {
 	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 		client.query('SELECT * FROM items', function(err, result) {
 			done();
-			if (err)
-			 { console.error(err); response.send("Error " + err); }
-			else
-			 { response.render('pages/blog', {results: result.rows} ); }
+			if (err) {
+				console.error(err); response.send("Error " + err);
+			} else {
+				response.render('pages/blog', {results: result.rows} );
+			}
+		});
+	});
+});
+app.get('/blog/:id', function (request, response) {
+	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+		client.query('SELECT * FROM items WHERE id=' + request.params.id, function(err, result) {
+			done();
+			if (err) {
+				console.error(err); response.send("Error " + err);
+			} else {
+				response.render('pages/blog', {results: result.rows} );
+			}
 		});
 	});
 });
