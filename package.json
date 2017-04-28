@@ -19,8 +19,6 @@
   "homepage": "https://github.com/abroom/blog#readme",
   "dependencies": {
     "ejs": "^2.5.2",
-    "express": "^4.14.0",
-    "express-stormpath": "^3.1.5",
-    "pg": "4.x"
+    "express": "^4.14.0"
   }
 }
